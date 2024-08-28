@@ -1,0 +1,428 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header{
+    background-color: transparent;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.material-icons{
+    position: absolute;
+    right: 5%;
+    top: 4%;
+    visibility: hidden;
+}
+
+.logo{
+    margin-right: 200px;
+}
+
+.logo:hover{
+    filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.461));
+}
+
+ul{
+    margin-right: 350px;
+}
+
+ul li{
+    list-style-type: none;
+    display: inline;
+    margin-left: 15px;
+}
+
+li a{
+    text-decoration: none;
+    position: relative;
+    text-transform: uppercase;
+    color: black;
+    font-size: 16px;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #e60000;
+    transition: width 0.5s linear;
+}
+
+a:hover::after {
+    width: 100%;
+    color: red;
+    transition: 0.2s;
+}
+
+a:hover::after{
+    width: 100%;
+    color: red;
+    transition: 0.2s;
+}
+
+.button1{
+     border: none;
+     background-color: red;
+     height: 30px;
+     width: 80px;
+     color: white;
+     font-size: medium;
+}
+
+.button1:hover{
+    background-color: rgba(240, 4, 4, 0.814);
+    transition: 0.3s;
+    box-shadow: inset 1px 1px 10px black;
+}
+
+article{
+    background-color: transparent;
+    height: 80vh;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.headings{
+    height: 80vh;
+    width: 40%;
+    background-color:  transparent;
+    text-align: left;
+    animation-name: heading;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes heading {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.shoe-image1{
+    height: 80vh;
+    width: 50%;
+    background-color:  transparent;
+}
+
+h1{
+    font-size: 60px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 60px;
+}
+
+.headings>p{
+    color: rgb(28, 28, 28);
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.button2{
+    background-color: red;
+    color: white;
+    font-weight: 600;
+    padding: 2px;
+    text-transform: capitalize;
+    border: none;
+    height: 22px;
+    width: 80px;
+}
+
+.button2:hover{
+    background-color: transparent;
+    border: 1px solid;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.button3{
+    background-color: transparent;
+    color: rgb(70, 70, 70);
+    font-weight: 600;
+    padding: 2px;
+    text-transform: capitalize;
+    border: 1px solid rgb(70, 70, 70);
+    height: 22px;
+    width: 80px;
+    margin-left: 15px;
+}
+
+.button3:hover{
+    background-color: red;
+    border: none;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+}
+
+#paragraph{
+    font-size: 10px;
+    line-height: 30px;
+    text-transform: capitalize;
+}
+
+.flipcart{
+    height: 20px;
+    width: 30px;
+}
+
+.amazon{
+    height: 20px;
+    width: 20px;
+}
+
+.shoe-image2{
+    height: 400px;
+    width: 550px;
+    filter: drop-shadow(15px 15px 10px rgb(128, 128, 128));
+    animation-name: shoe;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+}
+
+.shoe-image2:hover{
+    height: 440px;
+    width: 590px;
+    transition: all 0.5s ease;
+}
+
+@keyframes shoe{
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media only screen and (max-width:1024px){
+    .anchors{
+        display: none;
+    }
+
+    article{
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    h1{
+        font-size: 45px;
+        line-height: 55px;
+    }
+
+    header{
+        width: 100vw;
+    }
+
+}
+
+@media only screen and (max-width:769px){  
+    article{
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    h1{
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .shoe-image1{
+        height: 80vh;
+        width: 50vw;
+    }
+
+    .shoe-image2{
+        height: 350px;
+        width: 450px;
+    }
+    
+    .shoe-image2:hover{
+        height: 380px;
+        width: 480px;
+        transition: all 0.5s ease;
+    }
+
+    .button1{
+        display: none;
+       } 
+
+    .material-icons{
+        visibility: visible;
+        position: absolute;
+        top: 3%;
+        right: 10%;
+    }
+
+}
+
+@media only screen and (max-width:426px){
+    header{
+        background-color: transparent;
+        width: 100vw;
+    }
+
+    .button1{
+        display: none;
+       } 
+
+    .material-icons{
+        visibility: visible;
+        float: right;
+    }
+
+
+    .headings{
+        width: 100vw;
+        position: relative;
+    }   
+
+    h1{
+        font-size: 35px;
+        line-height: 35px;
+    } 
+    
+    .shoe-image1{
+        height: 80vh;
+        width: 30%;
+        position: absolute;
+        top: 68%;
+        left: 30%;
+    }
+    
+    .shoe-image2{
+        height: 180px;
+        width: 290px;
+    }
+    
+    .shoe-image2:hover{
+        height: 220px;
+        width: 330px;
+        transition: all 0.5s ease;
+    }
+}
+
+@media (max-width:376px){
+   header{
+    background-color: transparent;
+   }
+
+   .button1{
+    position: absolute;
+    left: 75%;
+    top: 3%;
+   }
+
+   .headings{
+    width: 100vw;
+    position: relative;
+   }
+
+   h1{
+    font-size: 30px;
+    line-height: 30px;
+   }
+
+   .shoe-image1{
+    height: 80vh;
+    width: 30%;
+    position: absolute;
+    top: 60%;
+    left: 30%;
+}
+
+.shoe-image2{
+    height: 180px;
+    width: 290px;
+}
+
+.shoe-image2:hover{
+    height: 220px;
+    width: 330px;
+    transition: all 0.5s ease;
+}
+}
+
+
+@media only screen and (max-width:320px){
+
+    .button1{
+        position: absolute;
+        left: 75%;
+        top: 3%;
+    }
+
+    article{
+        width: 100vw;
+        flex-direction:column;
+    }
+
+    .headings{
+        width: 95vw;
+        position: relative;
+    }
+
+    h1{
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    p{
+        font-size: 8px;
+    }
+
+    .button2{
+        font-size: 8px;
+        height: 20px;
+        width: 50px;
+    }
+
+    .button3{
+        font-size: 8px;
+        height: 20px;
+        width: 50px;
+    }
+
+    .shoe-image1{
+        height: 80vh;
+        width: 50vw;
+        position: absolute;
+        top: 65%;
+        left: 40%;
+    }
+
+    .shoe-image2{
+        height: 150px;
+        width: 220px;
+    }
+
+    .shoe-image2:hover{
+        height: 200px;
+        width: 250px;
+        transition: all 0.5s ease;
+    }
+}
